@@ -98,27 +98,18 @@
             </ul>
         </div>
 
-        <!-- Receber de Graça -->
+        <!-- Tela final -->
         <div id="p6" style="display: none">
             <div class="respondaeganhe">
                 <p style="font-family: 'GellixSemiBold';">Parabéns!</p>
             </div>
             <img src="images/descubra.jpg" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
             <p style="padding: 25px;">
-                Como forma de agradecimento, você ganhou <strong>um acesso grátis a nossa promoção "do Mercado Livre" nele você pode escolher rodar 2 vezes a roleta, aproveite!</strong>
+                Como forma de agradecimento, você ganhou <strong>um acesso grátis a nossa promoção "do Mercado Livre"</strong> — nele você pode escolher rodar 2 vezes a roleta. Aproveite!
                 <br><br>
                 Esperamos que você aproveite ao máximo cada produto e que eles tragam ainda mais diversão para você e sua família.
-                <br><br>
             </p>
-        </div>
-
-        <div class="question-container">
-            <div class="question" id="question1" style="display:none;"></div>
-            <div class="question" id="question2" style="display:none;"></div>
-            <div class="question" id="question3" style="display:none;"></div>
-            <div class="question" id="question4" style="display:none;"></div>
-            <div class="question" id="question5" style="display:none;"></div>
-            <div class="question" id="question6" style="display:none;"></div>
+            <button class="next-button" onclick="irRoleta()">Receber de Graça</button>
         </div>
 
         <div style="padding-bottom: 10px;"></div>
@@ -127,7 +118,6 @@
     </div>
 
     <script src="js/scripts.js"></script>
-
     <script>
         // Selecionar alternativa
         document.querySelectorAll('.quiz-options button').forEach(button => {
@@ -156,7 +146,7 @@
             document.getElementById('progress').style.width = progresso + '%';
             document.getElementById('progress-text').innerText = progresso + ' %';
 
-            // Esconde botão na última tela
+            // Esconde botão "Próximo" na última tela
             document.getElementById('next-button').style.display = (n === 6) ? 'none' : 'inline-block';
         }
 
@@ -165,13 +155,16 @@
             if (perguntaAtual <= totalPerguntas) {
                 mostraPergunta(perguntaAtual);
             } else {
-                window.location.href = 'roleta.html';
+                mostraPergunta(6);   // mostra tela final
             }
+        }
+
+        function irRoleta() {
+            window.location.href = 'roleta.html';
         }
 
         // Inicializa
         mostraPergunta(1);
     </script>
-
 </body>
 </html>
