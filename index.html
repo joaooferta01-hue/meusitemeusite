@@ -145,7 +145,7 @@
       <img src="mesaimagem1.png" style="width:100%;display:block"/>
     </div>
     <div class="slide" style="width:20%">
-      <video id="vid2" autoplay muted loop playsinline style="width:100%;display:block">
+      <video id="vid2" muted loop playsinline style="width:100%;display:block">
         <source src="video1.mp4" type="video/mp4">
       </video>
     </div>
@@ -168,6 +168,41 @@
   </div>
 </div>
 
+<!-- SCRIPT QUE DESLIGA AUTOPLAY E HABILITA SWIPE -->
+<script>
+(() => {
+  const inner = document.getElementById('carouselInner');
+  const slides = inner.children;
+  const dots   = document.querySelectorAll('.carousel-dots span');
+  let idx = 0;
+
+  /* função interna para ir ao slide */
+  const go = i => {
+    idx = (i + slides.length) % slides.length;
+    inner.style.transform = `translateX(-${idx * 100}%)`;
+    dots.forEach((d, j) => d.classList.toggle('active', j === idx));
+  };
+
+  /* touch / mouse swipe */
+  let startX = 0;
+  inner.addEventListener('touchstart', e => startX = e.touches[0].clientX, {passive:true});
+  inner.addEventListener('mousedown',  e => startX = e.clientX, {passive:true});
+  inner.addEventListener('touchend',   e => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 40) go(idx + 1);      // swipe para esquerda
+    if (endX - startX > 40) go(idx - 1);      // swipe para direita
+  }, {passive:true});
+  inner.addEventListener('mouseup', e => {
+    const endX = e.clientX;
+    if (startX - endX > 40) go(idx + 1);
+    if (endX - startX > 40) go(idx - 1);
+  }, {passive:true});
+
+  /* clique nos dots */
+  dots.forEach((d, i) => d.addEventListener('click', () => go(i)));
+})();
+</script>
+ 
 <!-- CONTADOR REGRESSIVO CORRIGIDO -->
 <div class="flash-banner">
   <span>OFERTAS RE<span style="display:inline-block;vertical-align:baseline">ϟ</span>ÂMPAGO</span>
