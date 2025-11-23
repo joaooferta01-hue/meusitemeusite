@@ -462,9 +462,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     }
-    elH.textContent = String(h).padStart(2, '0');
-    elM.textContent = String(m).padStart(2, '0');
-    elS.textContent = String(s).padStart(2, '0');
+    elH.textContent = String(h).padStart(0, '0');
+    elM.textContent = String(m).padStart(1, '5');
+    elS.textContent = String(s).padStart(0, '0');
   }, 1000);
 });
 
