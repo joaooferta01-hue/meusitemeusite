@@ -128,6 +128,30 @@
   </div>
 </div>
 
+<script>
+/* Touch-swipe no carrossel */
+const inner = document.getElementById('carouselInner');
+const dots = document.querySelectorAll('.carousel-dots span');
+let idx = 0, startX, moveX, threshold = 50;
+
+function updateSlide(i){
+  idx = Math.max(0, Math.min(i, 4));
+  inner.style.transform = `translateX(-${idx*100}%)`;
+  dots.forEach((d,j)=>d.classList.toggle('active',j===idx));
+}
+
+inner.addEventListener('touchstart', e=>startX=e.touches[0].clientX);
+inner.addEventListener('touchmove', e=>moveX=e.touches[0].clientX);
+inner.addEventListener('touchend', ()=>{
+  const diff = startX - moveX;
+  if(Math.abs(diff) > threshold){
+    diff>0 ? updateSlide(idx+1) : updateSlide(idx-1);
+  }
+});
+</script>
+  </div>
+</div>
+
 <div class="flash-banner">
   <span class="lightning">⚡</span>
   <span>OFERTA RELÂMPAGO</span>
