@@ -30,7 +30,7 @@
   .flash-banner .lightning{font-size:26px;color:#ffeb3b}
   .flash-banner .ends{flex:1;text-align:center;font-size:12px}
   .timer{display:flex;gap:2px}
-  .timer span{background:#000;color:#fff;padding:2px 4px;border-radius:2px;font-size:14px;min-width:20px;text-align:center}
+  .timer span{background:#000;color:#fff;padding:2px4px;border-radius:2px;font-size:14px;min-width:20px;text-align:center}
 
   .price-block{background:#fff;padding:12px;border-top:1px solid #f5f5f5}
   .price-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
@@ -142,44 +142,7 @@
   </div>
 </div>
 
-<script>
-/* Swipe 100% funcional */
-const inner = document.getElementById('carouselInner');
-const dots   = document.querySelectorAll('.carousel-dots span');
-const slides = inner.children;
-let idx = 0, startX = 0, moveX = 0, threshold = 50;
-
-function showSlide(i){
-  idx = Math.max(0, Math.min(i, slides.length-1));
-  inner.style.transform = `translateX(-${idx*20}%)`;
-  dots.forEach((d,j)=>d.classList.toggle('active',j===idx));
-
-  /* pausa/reproduz o vídeo quando estiver visível */
-  const vid = document.getElementById('vid2');
-  if(idx===1){
-    vid.play();
-  }else{
-    vid.pause();
-  }
-}
-
-inner.addEventListener('touchstart', e=>{
-  startX = e.touches[0].clientX;
-});
-inner.addEventListener('touchmove', e=>{
-  moveX = e.touches[0].clientX;
-});
-inner.addEventListener('touchend', ()=>{
-  const diff = startX - moveX;
-  if(Math.abs(diff) > threshold){
-    diff>0 ? showSlide(idx+1) : showSlide(idx-1);
-  }
-});
-</script>
-  </div>
-</div>
-
-<!-- Substitua o bloco .flash-banner inteiro por este: -->
+<!-- CONTADOR REGRESSIVO CORRIGIDO -->
 <div class="flash-banner">
   <span>OFERTAS RE<span style="display:inline-block;vertical-align:baseline">ϟ</span>ÂMPAGO</span>
   <div class="ends">TERMINA EM</div>
@@ -255,7 +218,7 @@ inner.addEventListener('touchend', ()=>{
     </div>
   </div>
 </div>
-<!-- ESPAÇO ENTRE FRETE E AVALIAÇÕES -->
+
 <div style="height:10px;background:#f5f5f5"></div>
 
 <!-- AVALIAÇÕES -->
@@ -306,9 +269,8 @@ inner.addEventListener('touchend', ()=>{
   <button>+ Seguir</button>
 </div>
 
- <!-- ESPAÇO ENTRE FRETE E AVALIAÇÕES -->
 <div style="height:10px;background:#f5f5f5"></div>
- 
+
 <!-- DESCRIÇÃO (resumida) -->
 <div class="tab-content">
   <h4>Descrição do produto</h4>
@@ -352,35 +314,6 @@ inner.addEventListener('touchend', ()=>{
     </button>
   </div>
 </div>
-
-<script>
-  const btn = document.getElementById('btnVerMais');
-  const seta = document.getElementById('seta');
-  const desc = document.getElementById('descCompleta');
-  btn.addEventListener('click', () => {
-    const aberto = desc.style.display === 'block';
-    desc.style.display = aberto ? 'none' : 'block';
-    seta.style.transform = aberto ? '' : 'rotate(180deg)';
-    btn.innerHTML = aberto
-      ? 'Ver mais<span id="seta" style="transition:transform .3s">⌄</span>'
-      : 'Ver menos<span id="seta" style="transition:transform .3s">⌄</span>';
-  });
-</script>
-  </div>
-</div>
-
-<script>
-  const btn = document.getElementById('btnVerMais');
-  const seta = document.getElementById('seta');
-  const desc = document.getElementById('descCompleta');
-
-  btn.addEventListener('click', () => {
-    const aberto = desc.style.display === 'block';
-    desc.style.display = aberto ? 'none' : 'block';
-    seta.style.transform = aberto ? '' : 'rotate(180deg)';
-    btn.innerHTML = aberto ? 'Ver mais<span id="seta" style="transition:transform .3s">⌄</span>' : 'Ver menos<span id="seta" style="transition:transform .3s">⌄</span>';
-  });
-</script>
 
 <footer>
   <a href="/security">Segurança</a> |
@@ -428,8 +361,7 @@ document.getElementById('btnQuero').addEventListener('click', function(){
   this.classList.add('selected');
 });
 
-<script>
-/* Garante que o DOM já carregou */
+/* Contador regressivo */
 document.addEventListener('DOMContentLoaded', () => {
   let h = 2, m = 20, s = 0;
   const elH = document.getElementById('h');
@@ -449,7 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
           m = 59;
           s = 59;
         } else {
-          clearInterval(timer);
+          clearInterval(timer); // acabou
         }
       }
     }
@@ -458,4 +390,20 @@ document.addEventListener('DOMContentLoaded', () => {
     elS.textContent = String(s).padStart(2, '0');
   }, 1000);
 });
+
+/* Ver mais / ver menos */
+const btn = document.getElementById('btnVerMais');
+const seta = document.getElementById('seta');
+const desc = document.getElementById('descCompleta');
+btn.addEventListener('click', () => {
+  const aberto = desc.style.display === 'block';
+  desc.style.display = aberto ? 'none' : 'block';
+  seta.style.transform = aberto ? '' : 'rotate(180deg)';
+  btn.innerHTML = aberto
+    ? 'Ver mais<span id="seta" style="transition:transform .3s">⌄</span>'
+    : 'Ver menos<span id="seta" style="transition:transform .3s">⌄</span>';
+});
 </script>
+
+</body>
+</html>
