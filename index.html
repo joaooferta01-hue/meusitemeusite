@@ -217,6 +217,48 @@
   </div>
 </div>
 
+  <!-- ========= BLOCO COMPLETO PARA COLAR ========= -->
+<style>
+/* container que envolve tudo */
+.variants{
+  margin:0;
+  padding:0;
+  height:auto !important;
+  min-height:0 !important;
+  line-height:1;
+}
+
+/* fileira das cores */
+.colors{
+  display:flex;
+  align-items:center;
+  gap:6px;          /* espaço entre os quadrados */
+  margin:0;
+  padding:0;
+  height:auto;
+}
+
+/* cada botão de cor */
+.colors span{
+  display:inline-block;
+  border:1px solid #bdbdbd;
+  border-radius:2px;
+  padding:4px 8px;
+  font-size:12px;
+  cursor:pointer;
+  line-height:1;
+  background:#fff;
+}
+
+/* cor selecinada */
+.colors span.selected{
+  border:1px solid #EE4D2D;
+  color:#EE4D2D;
+}
+</style>
+
+<!-- HTML -->
+<div class="variants">
   <div class="colors">
     <span data-cor="branca"  class="selected" onclick="selCor(this)">Branca</span>
     <span data-cor="preta"   onclick="selCor(this)">Preta</span>
@@ -225,26 +267,13 @@
   </div>
 </div>
 
-<!-- CSS extra (adicione dentro do <style> existente ou logo depois dele) -->
-<style>
-  /* limpa borda anterior da versão antiga */
-  .colors span{border:1px solid #bdbdbd;border-radius:2px;padding:4px 8px;font-size:12px;cursor:pointer}
-  /* cor laranja quando selecionada */
-  .colors span.selected{border:1px solid #EE4D2D;color:#EE4D2D}
-</style>
-
 <script>
-  function selCor(el){
-    document.querySelectorAll('.colors span').forEach(s => s.classList.remove('selected'));
-    el.classList.add('selected');
-  }
+function selCor(el){
+  document.querySelectorAll('.colors span').forEach(s => s.classList.remove('selected'));
+  el.classList.add('selected');
+}
 </script>
-
- <style>
-.variants{margin-bottom:0!important;padding-bottom:0!important}
-.colors{display:flex;align-items:center;gap:6px;margin:0;padding:0}
-</style>
-<!-- FIM bloco de cores -->
+<!-- ========= FIM DO BLOCO ========= -->
 
 <div class="extras">
   <div class="row">
