@@ -449,11 +449,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (s > 0) {
       s--;
     } else {
-      if (m > 0) {
+      if (m > 15) {
         m--;
-        s = 59;
+        s = 00;
       } else {
-        if (h > 0) {
+        if (h > 00) {
           h--;
           m = 15;
           s = 00;
