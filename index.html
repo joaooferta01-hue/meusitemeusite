@@ -26,14 +26,12 @@
   .carousel-dots span{width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%}
   .carousel-dots span.active{background:#fff}
 
-  /* OFERTA RELÂMPAGO */
   .flash-banner{background:#EE4D2D;color:#fff;font-size:16px;font-weight:700;padding:8px 12px;display:flex;align-items:center;gap:6px}
   .flash-banner .lightning{font-size:26px;color:#ffeb3b}
   .flash-banner .ends{flex:1;text-align:center;font-size:12px}
   .timer{display:flex;gap:2px}
   .timer span{background:#000;color:#fff;padding:2px 4px;border-radius:2px;font-size:14px;min-width:20px;text-align:center}
 
-  /* PREÇO */
   .price-block{background:#fff;padding:12px;border-top:1px solid #f5f5f5}
   .price-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
   .current{font-size:28px;font-weight:700;color:#EE4D2D}
@@ -43,7 +41,6 @@
   .vendas .heart{cursor:pointer;font-size:18px;border:1px solid #212121;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:#212121}
   .vendas .heart.liked{background:#ff5252;color:#fff;border-color:#ff5252}
 
-  /* CUPOM FRETE GRÁTIS */
   .coupon-row{background:#fff;padding:12px}
   .coupon-box{background:#00bfa5;color:#fff;border-radius:6px;display:flex;align-items:center;padding:8px 10px;font-size:14px}
   .coupon-box .icon-truck{font-size:20px;margin-right:6px}
@@ -52,7 +49,6 @@
   .coupon-box .btn-quero{background:#fff;color:#00bfa5;border:none;border-radius:3px;padding:3px 10px;font-weight:700;cursor:pointer}
   .coupon-box .btn-quero.selected{background:#004d40;color:#fff}
 
-  /* INDICADO + NOME */
   .product-title{background:#fff;padding:0 12px 12px}
   .badge-indicado{background:#EE4D2D;color:#fff;display:inline-block;font-size:12px;font-weight:700;padding:2px 6px;border-radius:2px;margin-right:6px}
   .product-name{font-size:16px;font-weight:500}
@@ -80,9 +76,6 @@
   .store-info .verified{color:#00bfa5;font-size:12px}
   .store button{background:#fff;border:1px solid #EE4D2D;color:#EE4D2D;padding:4px 8px;border-radius:2px;font-size:12px}
 
-  .tabs{position:sticky;top:48px;background:#fff;border-bottom:1px solid #e0e0e0;display:flex}
-  .tabs div{flex:1;text-align:center;padding:10px 0;font-size:14px;font-weight:500;border-bottom:2px solid transparent}
-  .tabs .active{border-color:#EE4D2D;color:#EE4D2D}
   .tab-content{background:#fff;padding:12px;font-size:14px}
   .tab-content h4{margin-bottom:8px;font-size:14px}
   .tab-content p{margin-bottom:6px}
@@ -90,25 +83,12 @@
   .tab-content table{width:100%;border-collapse:collapse;font-size:12px}
   .tab-content td{padding:4px 0;border-bottom:1px solid #f5f5f5}
   .tab-content td:first-child{width:35%;color:#757575}
-  .tab-content.hidden{display:none}
 
-  .video-container{margin:12px 0}
-  .video-container video{width:100%;border-radius:4px}
-
-  .garantia-selo{margin:12px 0;padding:8px;background:#f1fff1;border:1px dashed #00bfa5;border-radius:4px;font-size:14px;text-align:center;color:#00bfa5;font-weight:500}
-  .kit-promo{background:#fff4e6;border:1px dashed #EE4D2D;border-radius:4px;padding:12px;margin-top:8px;font-size:14px}
-  .kit-promo b{color:#EE4D2D}
-
+  .review-item .user{display:flex;align-items:center;margin-bottom:4px;font-size:14px}
   .review-item .user img{width:20px;height:20px;border-radius:50%;margin-right:6px}
-  .stars{color:#ffbf00}
-
-  .recommend{background:#fff;margin-top:8px;padding-bottom:12px}
-  .recommend h4{padding:12px 12px 6px;font-size:14px}
-  .rec-carousel{display:flex;overflow-x:auto;gap:8px;padding:0 12px}
-  .rec-card{min-width:110px;font-size:12px}
-  .rec-card img{width:110px;height:110px;object-fit:cover;border-radius:2px}
-  .rec-card .price{color:#EE4D2D;font-weight:500}
-  .rec-card .sold{color:#757575;font-size:11px}
+  .stars{color:#ffbf00;margin-bottom:4px}
+  .review-item p{margin-bottom:6px;font-size:14px}
+  .review-item .images img{width:80px;height:80px;border-radius:4px;margin-right:4px}
 
   footer{background:#fff;margin-top:8px;padding:12px;font-size:12px;color:#757575;text-align:center}
   footer a{color:#0275d8}
@@ -136,14 +116,12 @@
   <div class="carousel-inner" id="carouselInner">
     <img src="mesaimagem1.png" loading="lazy"/>
     <img src="mesaimagem2.png" loading="lazy"/>
-    <img src="mesaimagem3.png" loading="lazy"/>
   </div>
   <div class="carousel-dots">
-    <span class="active"></span><span></span><span></span>
+    <span class="active"></span><span></span>
   </div>
 </div>
 
-<!-- OFERTA RELÂMPAGO -->
 <div class="flash-banner">
   <span class="lightning">⚡</span>
   <span>OFERTA RELÂMPAGO</span>
@@ -153,27 +131,24 @@
   </div>
 </div>
 
-<!-- PREÇO -->
 <div class="price-block">
   <div style="display:flex;justify-content:space-between;align-items:center">
     <div class="price-row">
-  <span class="current" style="font-size:24px">R$ 38,90</span>
-  <span class="original">R$ 389,00</span>
-  <span class="discount" style="margin-left:4px">90% OFF</span>
-</div>
+      <span class="current" style="font-size:24px">R$ 38,90</span>
+      <span class="original">R$ 389,00</span>
+      <span class="discount" style="margin-left:4px">90% OFF</span>
+    </div>
     <div style="text-align:right;font-size:12px;color:#757575">
       <span>100 mil+ vendidos&nbsp;
         <i class="material-icons heart" id="heartIcon" style="font-size:18px;vertical-align:middle;cursor:pointer">favorite_border</i>
       </span>
     </div>
   </div>
-
   <div style="margin-top:4px;font-size:12px;color:#757575">
     Parcele em até 12x sem juros
   </div>
 </div>
 
-<!-- CUPOM FRETE GRÁTIS -->
 <div class="coupon-row">
   <div class="coupon-box">
     <i class="material-icons icon-truck">local_shipping</i>
@@ -185,7 +160,6 @@
   </div>
 </div>
 
-<!-- INDICADO + NOME -->
 <div class="product-title">
   <div>
     <span class="badge-indicado">Indicado</span>
@@ -225,13 +199,39 @@
   </div>
 </div>
 
-<div class="video-container">
-  <video controls poster="videoproduto.mov" loading="lazy">
-    <source src="unboxing-mesa.mov" type="video/mov">
-    Seu navegador não suporta vídeo.
-  </video>
+<!-- AVALIAÇÕES -->
+<div class="tab-content">
+  <h4>Avaliações (2.7k)</h4>
+  <div class="review-item">
+    <div class="user">
+      <img src="camilaperfil.png"/>
+      <span>Camila S.</span>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p>Chegou super rápido! Qualidade excelente, igual ao anúncio.</p>
+    <div class="images"><img src="cliente1.png"/></div>
+  </div>
+  <div class="review-item">
+    <div class="user">
+      <img src="joaopcliente.png"/>
+      <span>João P.</span>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p>Muito bonita e fácil de montar. Recomendo!</p>
+    <div class="images"><img src="cliente2.png"/></div>
+  </div>
+  <div class="review-item">
+    <div class="user">
+      <img src="mariaimagem.JPG"/>
+      <span>Maria L.</span>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p>Perfeita! Fica linda no quarto.</p>
+    <div class="images"><img src="cliente6.jpg"/></div>
+  </div>
 </div>
 
+<!-- PERFIL DA LOJA -->
 <div class="store">
   <img src="fotolojaimagem.png"/>
   <div class="store-info">
@@ -241,13 +241,8 @@
   <button>+ Seguir</button>
 </div>
 
-<div class="tabs">
-  <div class="tab active" onclick="openTab(event,'desc')">Descrição</div>
-  <div class="tab" onclick="openTab(event,'reviews')">Avaliações (2.7k)</div>
-  <div class="tab" onclick="openTab(event,'details')">Detalhes</div>
-</div>
-
-<div id="desc" class="tab-content">
+<!-- DESCRIÇÃO -->
+<div class="tab-content">
   <h4>Descrição do produto</h4>
   <ul>
     <li><b>Design retrô moderno:</b> combina com qualquer decoração.</li>
@@ -276,61 +271,10 @@
   <p><strong>Tags:</strong> mesa de cabeceira, criado-mudo casal, mesa lateral quarto, móvel para quarto moderno, par de mesas de cabeceira</p>
 </div>
 
-<div id="reviews" class="tab-content hidden">
-  <div class="reviews-filter">
-    <span>Todas (2719)</span><span>Com foto (612)</span><span>5 estrelas (2719)</span>
-  </div>
-
-  <div class="review-item">
-    <div class="user">
-      <img src="camilaperfil.png"/>
-      <span>Camila S.</span>
-    </div>
-    <div class="stars">★★★★★</div>
-    <p>Chegou super rápido! Qualidade excelente, igual ao anúncio.</p>
-    <div class="images"><img src="cliente1.png"/></div>
-  </div>
-
-  <div class="review-item">
-    <div class="user">
-      <img src="joaopcliente.png"/>
-      <span>João P.</span>
-    </div>
-    <div class="stars">★★★★★</div>
-    <p>Muito bonita e fácil de montar. Recomendo!</p>
-    <div class="images"><img src="cliente2.png"/></div>
-  </div>
-
-  <div class="review-item">
-    <div class="user">
-      <img src="mariaimagem.JPG" alt="Foto de Maria L."/>
-      <span>Maria L.</span>
-    </div>
-    <div class="stars">★★★★★</div>
-    <p>Perfeita! Fica linda no quarto.</p>
-    <div class="images">
-      <img src="cliente6.jpg" alt="Foto do produto enviada por Maria"/>
-    </div>
-  </div>
-</div>
-
-<div id="details" class="tab-content hidden">
-  <h4>Especificações</h4>
-  <table>
-    <tr><td>Marca</td><td>Eggers Móveis</td></tr>
-    <tr><td>Modelo</td><td>Mesa Enfeite</td></tr>
-    <tr><td>Material</td><td>MDP</td></tr>
-    <tr><td>Montagem</td><td>Necessita Montagem</td></tr>
-    <tr><td>País de Origem</td><td>Brasil</td></tr>
-    <tr><td>Peso do Pacote</td><td>3,5 kg</td></tr>
-    <tr><td>Dimensões</td><td>45 × 30,9 × 24,3 cm</td></tr>
-  </table>
-</div>
-
 <footer>
   <a href="/security">Segurança</a> |
   <a href="/policies">Política de privacidade</a><br/>
-  © 2025 Shopee. Todos os direitos reservados.
+  ©️ 2025 Shopee. Todos os direitos reservados.
 </footer>
 
 <div class="bottom-bar">
@@ -342,9 +286,9 @@
 </div>
 
 <script>
-/* Carrossel */
+/* Carrossel com 2 imagens */
 let idx = 0;
-const inner = document.getElementById('carouselInner');
+const inner = document.querySelector('.carousel-inner');
 const imgs = inner.children;
 const dots = document.querySelectorAll('.carousel-dots span');
 setInterval(() => {
@@ -352,14 +296,6 @@ setInterval(() => {
   inner.style.transform = `translateX(-${idx * 100}%)`;
   dots.forEach((d, i) => d.classList.toggle('active', i === idx));
 }, 4000);
-
-/* Abas */
-function openTab(evt, tabName) {
-  document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(tabName).classList.remove('hidden');
-  evt.currentTarget.classList.add('active');
-}
 
 /* Quantidade */
 function changeQty(dir) {
