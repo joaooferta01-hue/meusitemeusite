@@ -430,61 +430,14 @@ function selCor(el){
 </footer>
 
 <div class="bottom-bar">
-  <!-- CHAT -->
-  <button class="chat">
-    <i class="material-icons">chat</i>
-  </button>
-
-  <!-- DIVISÓRIA PRETA -->
-  <div style="width:1px;height:100%;background:#000"></div>
-
-  <!-- CARRINHO -->
+  <button class="chat"><i class="material-icons">chat</i><br/></button>
   <button class="cart" onclick="window.open('https://seguro.shopeebr.click/api/public/shopify?product=1899528628384&store=18995', '_blank')">
-    <i class="material-icons">shopping_cart</i>
+    <i class="material-icons">shopping_cart</i><br/>
   </button>
-
-  <!-- COMPRAR AGORA -->
-  <button class="buy" onclick="window.location.href='https://seguro.shopeebr.click/api/public/shopify?product=1899528628384&store=18995'">
-    Comprar agora
-  </button>
+  <button class="buy" onclick="window.location.href='https://seguro.shopeebr.click/api/public/shopify?product=1899528628384&store=18995'">Comprar agora</button>
 </div>
 
-<style>
-.bottom-bar{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  display:flex;
-  height:48px;
-  background:#fff;
-  border-top:1px solid #e0e0e0;
-  z-index:999;
-}
-
-.bottom-bar button{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:none;
-  color:#fff;
-  font-size:14px;
-  font-weight:500;
-}
-
-.chat,
-.cart{
-  width:48px;     /* largura fixa para quadrados perfeitos */
-  background:#00bfa5;
-}
-
-.buy{
-  flex:1;
-  background:#EE4D2D;
-}
-</style>
-<!-- ===== FIM DA BARRA ===== -->
- 
+<script>
 /* Carrossel com 2 imagens */
 let idx = 0;
 const inner = document.querySelector('.carousel-inner');
