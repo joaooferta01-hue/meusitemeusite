@@ -138,33 +138,66 @@
   </div>
 </header>
  
-<!-- CARROSSEL CORRIGIDO -->
+<!-- CARROSSEL FUNCIONAL -->
 <div class="carousel">
-  <div class="carousel-inner" id="carouselInner" style="display:flex;width:500%;transition:transform .4s ease">
-    <div class="slide" style="width:20%">
-      <img src="carrosel1.jpg" style="width:100%;display:block"/>
-    </div>
-    <div class="slide" style="width:20%">
-     <img src="carrosel2.jpg" style="width:100%;display:block"/>
-    </div>
-    <div class="slide" style="width:20%">
-      <img src="carrosel3.jpg" style="width:100%;display:block"/>
-    </div>
-    <div class="slide" style="width:20%">
-      <img src="carrosel4.jpg" style="width:100%;display:block"/>
-    </div>
-    <div class="slide" style="width:20%">
-      <img src="carrosel5.jpg" style="width:100%;display:block"/>
-    </div>
+  <div class="carousel-inner" id="carouselInner">
+    <div class="slide"><img src="carrosel1.jpg"></div>
+    <div class="slide"><img src="carrosel2.jpg"></div>
+    <div class="slide"><img src="carrosel3.jpg"></div>
+    <div class="slide"><img src="carrosel4.jpg"></div>
+    <div class="slide"><img src="carrosel5.jpg"></div>
   </div>
+
   <div class="carousel-dots">
-    <span class="active"></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
   </div>
 </div>
+
+<style>
+.carousel{position:relative;overflow:hidden}
+.carousel-inner{display:flex;transition:transform .4s ease}
+.slide{flex:0 0 100%}
+.slide img{width:100%;display:block}
+
+.carousel-dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer}
+.dot.active{background:#fff}
+</style>
+
+<script>
+(() => {
+  const inner = document.getElementById('carouselInner');
+  const dots  = document.querySelectorAll('.dot');
+  let idx = 0;
+
+  const go = i => {
+    idx = (i + 5) % 5;
+    inner.style.transform = `translateX(-${idx * 100 / 5}%)`;
+    dots.forEach((d,j)=>d.classList.toggle('active',j===idx));
+  };
+
+  dots.forEach((d,i)=>d.addEventListener('click',()=>go(i)));
+
+  /* swipe */
+  let x0 = null;
+  const unify = e => e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+  inner.addEventListener('touchstart', e=>x0=unify(e),{passive:true});
+  inner.addEventListener('mousedown',  e=>x0=unify(e));
+  const end = e => {
+    if (x0===null) return;
+    const dx = unify(e)-x0;
+    Math.abs(dx)>40 && go(dx>0?idx-1:idx+1);
+    x0=null;
+  };
+  inner.addEventListener('touchend', end,{passive:true});
+  inner.addEventListener('mouseup',  end);
+})();
+</script>
+<!-- /CARROSSEL -->
 
 <!-- CONTADOR REGRESSIVO CORRIGIDO -->
 <div class="flash-banner">
