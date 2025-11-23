@@ -112,40 +112,67 @@
   </div>
 </header>
 
-<!-- Substitua o bloco <div class="carousel"> inteiro por este: -->
+<!-- CARROSSEL CORRIGIDO -->
 <div class="carousel">
-  <div class="carousel-inner" id="carouselInner">
-    <img src="mesaimagem1.png" loading="lazy"/>
-    <video autoplay muted loop playsinline style="width:100%;flex-shrink:0">
-      <source src="video1.mp4" type="video/mp4">
-    </video>
-    <img src="mesaimagem2.png" loading="lazy"/>
-    <img src="mesaimagem3.png" loading="lazy"/>
-    <img src="mesaimagem4.png" loading="lazy"/>
+  <div class="carousel-inner" id="carouselInner" style="display:flex;width:500%;transition:transform .4s ease">
+    <div class="slide" style="width:20%">
+      <img src="mesaimagem1.png" style="width:100%;display:block"/>
+    </div>
+    <div class="slide" style="width:20%">
+      <video id="vid2" autoplay muted loop playsinline style="width:100%;display:block">
+        <source src="video1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="slide" style="width:20%">
+      <img src="mesaimagem2.png" style="width:100%;display:block"/>
+    </div>
+    <div class="slide" style="width:20%">
+      <img src="mesaimagem3.png" style="width:100%;display:block"/>
+    </div>
+    <div class="slide" style="width:20%">
+      <img src="mesaimagem4.png" style="width:100%;display:block"/>
+    </div>
   </div>
   <div class="carousel-dots">
-    <span class="active"></span><span></span><span></span><span></span><span></span>
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </div>
 
 <script>
-/* Touch-swipe no carrossel */
+/* Swipe 100% funcional */
 const inner = document.getElementById('carouselInner');
-const dots = document.querySelectorAll('.carousel-dots span');
-let idx = 0, startX, moveX, threshold = 50;
+const dots   = document.querySelectorAll('.carousel-dots span');
+const slides = inner.children;
+let idx = 0, startX = 0, moveX = 0, threshold = 50;
 
-function updateSlide(i){
-  idx = Math.max(0, Math.min(i, 4));
-  inner.style.transform = `translateX(-${idx*100}%)`;
+function showSlide(i){
+  idx = Math.max(0, Math.min(i, slides.length-1));
+  inner.style.transform = `translateX(-${idx*20}%)`;
   dots.forEach((d,j)=>d.classList.toggle('active',j===idx));
+
+  /* pausa/reproduz o vídeo quando estiver visível */
+  const vid = document.getElementById('vid2');
+  if(idx===1){
+    vid.play();
+  }else{
+    vid.pause();
+  }
 }
 
-inner.addEventListener('touchstart', e=>startX=e.touches[0].clientX);
-inner.addEventListener('touchmove', e=>moveX=e.touches[0].clientX);
+inner.addEventListener('touchstart', e=>{
+  startX = e.touches[0].clientX;
+});
+inner.addEventListener('touchmove', e=>{
+  moveX = e.touches[0].clientX;
+});
 inner.addEventListener('touchend', ()=>{
   const diff = startX - moveX;
   if(Math.abs(diff) > threshold){
-    diff>0 ? updateSlide(idx+1) : updateSlide(idx-1);
+    diff>0 ? showSlide(idx+1) : showSlide(idx-1);
   }
 });
 </script>
