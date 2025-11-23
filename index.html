@@ -217,26 +217,31 @@
   </div>
 </div>
 
-<div class="colors">
-  <span data-cor="branca"  class="selected" onclick="selCor(this)">Branca</span>
-  <span data-cor="preta"   onclick="selCor(this)">Preta</span>
-  <span data-cor="laranja" onclick="selCor(this)">Laranja</span>
-  <span data-cor="rosa"    onclick="selCor(this)">Rosa</span>
+div class="variants">
+  <h4>Cor</h4>
+  <div class="colors">
+    <span data-cor="branca"  class="selected" onclick="selCor(this)">Branca</span>
+    <span data-cor="preta"   onclick="selCor(this)">Preta</span>
+    <span data-cor="laranja" onclick="selCor(this)">Laranja</span>
+    <span data-cor="rosa"    onclick="selCor(this)">Rosa</span>
+  </div>
 </div>
 
+<!-- CSS extra (adicione dentro do <style> existente ou logo depois dele) -->
 <style>
-  /* borda padrão preta */
-  .colors span{border:1px solid #212121}
-  /* quando selecionada, borda laranja */
+  /* limpa borda anterior da versão antiga */
+  .colors span{border:1px solid #bdbdbd;border-radius:2px;padding:4px 8px;font-size:12px;cursor:pointer}
+  /* cor laranja quando selecionada */
   .colors span.selected{border:1px solid #EE4D2D;color:#EE4D2D}
 </style>
 
 <script>
   function selCor(el){
-    document.querySelectorAll('.colors span').forEachpan=>span.classList.remove('selected'));
+    document.querySelectorAll('.colors span').forEach(s => s.classList.remove('selected'));
     el.classList.add('selected');
   }
 </script>
+<!-- FIM bloco de cores -->
 
 <div class="extras">
   <div class="row">
