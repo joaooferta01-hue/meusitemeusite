@@ -256,44 +256,59 @@
 <div class="tab-content">
   <h4>Descrição do produto</h4>
   <ul>
-    <li><b>Design retrô moderno:</b> combina com qualquer decoração.</li>
-    <li><b>2 nichos espaçosos:</b> livros, óculos e celular sempre à mão.</li>
-    <li><b>Acabamento texturizado branco:</b> fácil de limpar e sem amarelamento.</li>
-    <li><b>Montagem super simples:</b> vem com manual ilustrado e ferragens.</li>
+    <li><b>Dimensão:</b> 49 × 43 × 13,8 mm</li>
+    <li><b>Estojo:</b> liga de titânio resistente e leve</li>
+    <li><b>Cinta:</b> silicone padrão, compatível com 44/45/49 mm</li>
+    <li><b>Carregamento:</b> magnético sem fio — rápido e prático</li>
   </ul>
 
-  <!-- Esconde o restante até clicar em "Ver mais" -->
   <div id="descCompleta" style="display:none">
-    <p><strong>O que você recebe:</strong> 01 Mesa de Cabeceira, parafusos, chaves de fenda, manual de montagem.</p>
-
-    <h4>Ficha Técnica</h4>
+    <h4>Tela & Tecnologia</h4>
     <ul>
-      <li>Acabamento: Texturizado</li>
-      <li>Escala de Brilho: Semi-Brilho</li>
-      <li>Possui 02 nichos</li>
-      <li>Sistema de Montagem: Parafusos</li>
-      <li>Marca: EGGERS</li>
-      <li>Ideal para: Quartos e Salas</li>
+      <li>Tela LCD HD de 1,81" com resolução 425 × 518 pixels</li>
+      <li>Compatível com Android 5.0+ e iOS 8.0+</li>
+      <li>Bluetooth duplo para conexões simultâneas</li>
     </ul>
 
-    <h4>Medidas do Produto</h4>
-    <ul><li>Altura: 45 cm</li><li>Largura: 30,9 cm</li><li>Profundidade: 24,3 cm</li></ul>
+    <h4>Funções Inteligentes</h4>
+    <ul>
+      <li>Monitor de frequência cardíaca</li>
+      <li>Medição de oxigênio no sangue (SpO₂)</li>
+      <li>Monitor de sono e lembrete sedentário</li>
+      <li>Pedômetro e múltiplos modos esportivos</li>
+      <li>Assistente de voz AI integrado</li>
+      <li>Controle de música via BT</li>
+      <li>Despertador, calculadora, cronômetro</li>
+    </ul>
 
-    <h4>Limpeza e Cuidados</h4>
-    <ul><li>Passe um pano levemente umedecido e depois seque.</li><li>Não use produtos químicos.</li></ul>
+    <h4>Cores Disponíveis</h4>
+    <ul><li>Branco, Preto, Rosa</li></ul>
 
-    <h4>Garantia</h4>
-    <p>03 meses contra defeito de fabricação + 7 dias para devolução.</p>
-
-    <p><strong>Tags:</strong> mesa de cabeceira, criado-mudo casal, mesa lateral quarto, móvel para quarto moderno, par de mesas de cabeceira</p>
+    <h4>O que vem na caixa?</h4>
+    <ul><li>Smartwatch, cinta de silicone, carregador magnético sem fio, manual rápido</li></ul>
   </div>
 
-  <!-- Botão Ver Mais (seta para baixo) -->
   <div style="display:flex;justify-content:center;margin-top:12px">
     <button id="btnVerMais" style="background:none;border:none;color:#EE4D2D;font-size:14px;font-weight:500;display:flex;align-items:center;gap:4px;cursor:pointer">
       Ver mais
       <span id="seta" style="transition:transform .3s">⌄</span>
     </button>
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById('btnVerMais');
+  const seta = document.getElementById('seta');
+  const desc = document.getElementById('descCompleta');
+  btn.addEventListener('click', () => {
+    const aberto = desc.style.display === 'block';
+    desc.style.display = aberto ? 'none' : 'block';
+    seta.style.transform = aberto ? '' : 'rotate(180deg)';
+    btn.innerHTML = aberto
+      ? 'Ver mais<span id="seta" style="transition:transform .3s">⌄</span>'
+      : 'Ver menos<span id="seta" style="transition:transform .3s">⌄</span>';
+  });
+</script>
   </div>
 </div>
 
