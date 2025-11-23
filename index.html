@@ -217,15 +217,26 @@
   </div>
 </div>
 
-<div class="variants">
-  <h4>Cor</h4>
-  <div class="colors">
-    <span class="selected">Branca</span>
-    <span>Preta</span>
-    <span>Laranja</span>
-    <span>Rosa</span>
-  </div>
+<div class="colors">
+  <span data-cor="branca"  class="selected" onclick="selCor(this)">Branca</span>
+  <span data-cor="preta"   onclick="selCor(this)">Preta</span>
+  <span data-cor="laranja" onclick="selCor(this)">Laranja</span>
+  <span data-cor="rosa"    onclick="selCor(this)">Rosa</span>
 </div>
+
+<style>
+  /* borda padrão preta */
+  .colors span{border:1px solid #212121}
+  /* quando selecionada, borda laranja */
+  .colors span.selected{border:1px solid #EE4D2D;color:#EE4D2D}
+</style>
+
+<script>
+  function selCor(el){
+    document.querySelectorAll('.colors span').forEachpan=>span.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+</script>
 
 <div class="extras">
   <div class="row">
