@@ -428,26 +428,32 @@ document.getElementById('btnQuero').addEventListener('click', function(){
   this.classList.add('selected');
 });
 
-/* Temporizador */
+<script>
+/* Temporizador corrigido */
 let h = 2, m = 20, s = 0;
 const elH = document.getElementById('h');
 const elM = document.getElementById('m');
 const elS = document.getElementById('s');
-setInterval(() => {
-  if (s === 0) {
-    if (m === 0) {
-      if (h === 0) return;
-      h--; m = 59; s = 59;
-    } else {
-      m--; s = 59;
-    }
-  } else {
+
+const timer = setInterval(() => {
+  if (s > 0) {
     s--;
+  } else {
+    if (m > 0) {
+      m--;
+      s = 59;
+    } else {
+      if (h > 0) {
+        h--;
+        m = 59;
+        s = 59;
+      } else {
+        clearInterval(timer);
+      }
+    }
   }
   elH.textContent = String(h).padStart(2, '0');
   elM.textContent = String(m).padStart(2, '0');
   elS.textContent = String(s).padStart(2, '0');
 }, 1000);
 </script>
-</body>
-</html>
