@@ -103,12 +103,33 @@
 <body>
 
 <header>
-  <img class="logo" src="logo-shopee-header.png"/>
-  <div class="search">Buscar na Shopee</div>
-  <div class="icons">
-    <i class="material-icons">shopping_cart</i>
-    <span class="badge">3</span>
-    <i class="material-icons">notifications</i>
+  <!-- logotipo clicável -->
+  <a href="/" aria-label="Ir para a página inicial">
+    <img class="logo" src="logo-shopee-header.png" style="height:28px"/>
+  </a>
+
+  <!-- campo de busca funcional -->
+  <form action="/search" method="get" style="flex:1;margin-left:12px;display:flex">
+    <input type="text" name="keyword" placeholder="Buscar na Shopee"
+           style="flex:1;height:34px;border:none;border-radius:2px 0 0 2px;padding:0 8px;font-size:14px">
+    <button type="submit"
+            style="width:40px;height:34px;border:none;background:#fff;border-radius:0 2px 2px 0;cursor:pointer">
+      <i class="material-icons" style="color:#757575;font-size:20px">search</i>
+    </button>
+  </form>
+
+  <!-- ícones que redirecionam -->
+  <div class="icons" style="gap:16px;margin-left:12px">
+    <!-- carrinho com badge real -->
+    <a href="/cart" aria-label="Meu carrinho" style="position:relative;color:#fff">
+      <i class="material-icons" style="font-size:24px">shopping_cart</i>
+      <span class="badge" id="cartBadge">3</span>
+    </a>
+
+    <!-- notificações -->
+    <a href="/notifications" aria-label="Notificações" style="color:#fff">
+      <i class="material-icons" style="font-size:24px">notifications</i>
+    </a>
   </div>
 </header>
 
