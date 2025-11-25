@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    { "source": "/policies", "destination": "/410", "statusCode": 410 },
-    { "source": "/security", "destination": "/410", "statusCode": 410 }
-  ],
-  "routes": [
-    { "src": "/410", "dest": "/api/gone" }
-  ]
-}
